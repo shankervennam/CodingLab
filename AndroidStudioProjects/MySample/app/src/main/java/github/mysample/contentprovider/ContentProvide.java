@@ -33,6 +33,7 @@ public class ContentProvide extends Activity implements LoaderManager.LoaderCall
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_content_provider);
+        mTextViewQuery = findViewById(R.id.textViewQuery);
 
         findViewById(R.id.content_provider).setOnClickListener(this);
     }
@@ -53,7 +54,7 @@ public class ContentProvide extends Activity implements LoaderManager.LoaderCall
             StringBuilder stringBuilder = new StringBuilder("");
             while (cursor.moveToNext()) {
                 stringBuilder.append(cursor.getString(0)).append(",").append(cursor.getString(1)).
-                        append(",").append(cursor.getString(2));
+                        append(",").append("/n");
             }
             mTextViewQuery.setText(stringBuilder.toString());
         } else {

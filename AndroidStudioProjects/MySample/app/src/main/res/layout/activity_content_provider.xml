@@ -5,9 +5,24 @@
     android:layout_height="match_parent">
 
     <Button
-        android:text="ContentProvider"
         android:id="@+id/content_provider"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="95dp"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="18dp"
+        android:layout_toEndOf="@+id/textViewQuery"
+        android:layout_toRightOf="@+id/textViewQuery"
+        android:text="ContentProvider" />
+
+
+    <TextView
+        android:id="@+id/textViewQuery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/content_provider"
+        android:gravity="center"
+        android:textSize="25sp" />
 
 </RelativeLayout>
